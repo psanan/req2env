@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+req_file=${1:-requirements.txt}
+env_name=${PWD##*/}-env
+python -m venv $env_name
+. $env_name/bin/activate
+pip install -r $req_file
+ln -sf $env_name/bin/activate activate  # clobbers!
+chmod +x activate
+printf "To activate,\n  . activate\n"
