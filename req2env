@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 req_file=${1:-requirements.txt}
-env_name_default=${PWD##*/}-env
+env_name_default=${PWD##*/}-env  # use directory name by stripping longest prefix
 env_name=${2:-$env_name_default}
 python -m venv $env_name
 . $env_name/bin/activate
