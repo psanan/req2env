@@ -9,7 +9,7 @@ pip install -r "$req_file"
 activate_name=activate-$env_name
 ln -sf "$env_name/bin/activate" "$activate_name"  # clobbers!
 
-printf -- "----------------------------------------\n"
-printf "Created environment in $env_name\n"
-printf "To activate,\n  . \"$activate_name\"\n"
-printf -- "----------------------------------------\n"
+printf -- '----------------------------------------\n'
+printf 'Created environment in %s\n' "$env_name"
+printf 'To activate,\n  . "%s"\n' "$activate_name"
+printf -- '----------------------------------------\n'
